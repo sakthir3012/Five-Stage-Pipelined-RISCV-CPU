@@ -4,7 +4,7 @@ A Verilog-based five-stage pipelined processor developed in AMD Vivado 2026.1 fo
 
 The design includes pipeline hazard handling, forwarding, machine-mode CSR operations, and trap handling. The supplied instruction-level and system-level simulation testbenches pass in Vivado.
 
-**Project status:** Simulation-tested; synthesis, timing analysis, FPGA deployment, and complete RV32I compliance are not yet verified.
+**Project status:** Instruction-level and system-level simulations passed; bitstream generation completed in AMD Vivado 2026.1. On-board functional validation and complete RV32I compliance have not yet been verified.
 
 ## ISA coverage
 | Group | Instructions |
@@ -46,8 +46,9 @@ Not included: M/A/C extensions, interrupts, user/supervisor modes, misaligned-ac
    `set_property top tb_system [get_filesets sim_1]` then `launch_simulation`.
    Expect `SYSTEM TEST PASSED ...`. Each register / trap-log check prints `ok` or `FAIL`.
 
-## Run on the Boolean Board
-Generate Bitstream, then Open Hardware Manager > Auto Connect > Program Device.
+## FPGA Implementation Status
+
+The design targets the RealDigital Boolean Board (Spartan-7). Bitstream generation has been completed using AMD Vivado 2026.1. On-board programming and functional validation are documented separately as pending until verified.
 
 | Control | Function |
 |---|---|
