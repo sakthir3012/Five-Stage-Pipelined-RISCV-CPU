@@ -1,6 +1,10 @@
-# 5-stage pipelined RV32I + Zicsr CPU (Machine mode) - Vivado / Boolean Board
+# Five-Stage Pipelined RISC-V CPU
 
-Complete RV32I base ISA (all 40 instructions) plus Zicsr and machine-mode traps.
+A Verilog-based five-stage pipelined processor developed in AMD Vivado 2026.1 for the RealDigital Boolean Board (Spartan-7).
+
+The design includes pipeline hazard handling, forwarding, machine-mode CSR operations, and trap handling. The supplied instruction-level and system-level simulation testbenches pass in Vivado.
+
+**Project status:** Simulation-tested; synthesis, timing analysis, FPGA deployment, and complete RV32I compliance are not yet verified.
 
 ## ISA coverage
 | Group | Instructions |
