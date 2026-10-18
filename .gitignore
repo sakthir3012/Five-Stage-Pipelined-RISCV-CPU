@@ -1,0 +1,21 @@
+
+# Vivado generated project directory
+vivado_proj/
+
+# Logs and simulation waveforms
+*.jou
+*.log
+*.str
+*.wdb
+*.vcd
+
+# Generated Vivado directories
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# Operating system files
+.DS_Store
+Thumbs.db
