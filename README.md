@@ -70,8 +70,8 @@ The design was implemented for the RealDigital Boolean Board using the Spartan-7
 
 These results describe the routed board-level design, including the Boolean Board wrapper, under the clock constraints specified in Vivado.
 
-**Validation status:** Instruction-level and system-level simulations passed, and bitstream generation was completed. On-board functional validation and complete RV32I compliance have not yet been verified.
 
+### Board Controls
 | Control | Function |
 |---|---|
 | btn[0] | Reset (also auto at power-up) |
