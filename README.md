@@ -46,9 +46,31 @@ Not included: M/A/C extensions, interrupts, user/supervisor modes, misaligned-ac
    `set_property top tb_system [get_filesets sim_1]` then `launch_simulation`.
    Expect `SYSTEM TEST PASSED ...`. Each register / trap-log check prints `ok` or `FAIL`.
 
-## FPGA Implementation Status
+## FPGA Implementation Results
 
-The design targets the RealDigital Boolean Board (Spartan-7). Bitstream generation has been completed using AMD Vivado 2026.1. On-board programming and functional validation are documented separately as pending until verified.
+The design was implemented for the RealDigital Boolean Board using the Spartan-7 FPGA (`xc7s50csga324-1`) in AMD Vivado 2026.1. The routed implementation completed, and the timing report indicates that all user-specified timing constraints were met.
+
+### Resource Utilization
+
+| Resource | Used | Available | Utilization |
+|---|---:|---:|---:|
+| Slice LUTs | 1,051 | 32,600 | 3.22% |
+| Slice Registers | 597 | 65,200 | 0.92% |
+| Block RAM Tiles | 2 | 75 | 2.67% |
+| DSPs | 0 | 120 | 0.00% |
+| Slices | 336 | 8,150 | 4.12% |
+| Bonded I/O | 27 | 210 | 12.86% |
+
+### Timing Summary
+
+- **Overall worst negative slack (WNS):** +4.225 ns
+- **Total negative slack (TNS):** 0 ns
+- **Timing constraint status:** All user-specified timing constraints met
+- **Clock domains:** `sys_clk` at 100 MHz and `cpu_clk` at 10 MHz
+
+These results describe the routed board-level design, including the Boolean Board wrapper, under the clock constraints specified in Vivado.
+
+**Validation status:** Instruction-level and system-level simulations passed, and bitstream generation was completed. On-board functional validation and complete RV32I compliance have not yet been verified.
 
 | Control | Function |
 |---|---|
