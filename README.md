@@ -4,7 +4,7 @@ A Verilog-based five-stage pipelined processor developed in AMD Vivado 2026.1 fo
 
 The design includes pipeline hazard handling, forwarding, machine-mode CSR operations, and trap handling. The supplied instruction-level and system-level simulation testbenches pass in Vivado.
 
-**Project status:** Instruction-level and system-level simulations passed; bitstream generation completed in AMD Vivado 2026.1. On-board functional validation and complete RV32I compliance have not yet been verified.
+**Project status:** Instruction-level and system-level simulations passed. Bitstream generation and routed FPGA implementation completed in AMD Vivado 2026.1. The implementation uses 1,051 Slice LUTs and 597 Slice Registers, with all user-specified timing constraints met. On-board functional validation and complete RV32I compliance have not yet been verified.
 
 ## ISA coverage
 | Group | Instructions |
